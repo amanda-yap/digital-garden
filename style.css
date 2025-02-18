@@ -1,21 +1,71 @@
 :root {
-    --greygreen: "#dad7cd";
-    --lightgreen: "#a3b18a";
-    --green: "#588157";
-    --darkgreen: "#3a5a40";
-    --darkergreen: "#344e41";
+    --greygreen: #dad7cd;
+    --lightgreen: #a3b18a;
+    --green: #588157;
+    --darkgreen: #3a5a40;
+    --darkergreen: #344e41;
 }
 
 html {
-    background-color: #3a5a40;
+    background-color:  "white";
 }
 
-h2 {
+h1 {
     font-family: "Playfair Display", serif;
-    font-size: 5vw;
-    color: #dad7cd;
-    text-align: center;
+    font-size: 5rem;
+    color: var(--darkergreen);
+}
 
-    
-    
+h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    color: var(--green);
+}
+
+p {
+    font-family: "Source Serif 4", serif;
+    font-size: 1.25rem;
+    color: var(--darkergreen);
+}
+
+.firstPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem;
+}
+
+.description {
+    border-left: 3px solid var(--darkgreen);
+}
+
+.description p {
+    margin-left: 1rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.nav button {
+    width: 11rem;
+    height: 3rem;
+    background-color: var(--lightgreen);
+    border: 1.5px solid var(--darkergreen);
+    border-radius: 2px;
+    font-family: "Source Serif 4", serif;
+    font-size: 1rem;
+    color: var(--darkergreen);
+}
+
+.nav button:hover {
+    background-color: var(--darkgreen);
+    color: white;
+    transition: 0.2s ease;
+    cursor: pointer;
 }
