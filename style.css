@@ -1,4 +1,5 @@
 :root {
+    --mutedwhite: #fbf7ef;
     --greygreen: #dad7cd;
     --lightgreen: #a3b18a;
     --green: #588157;
@@ -6,8 +7,10 @@
     --darkergreen: #344e41;
 }
 
-html {
-    background-color:  "white";
+body {
+    background-color: var(--mutedwhite);
+    padding: 0;
+    margin: 0;
 }
 
 h1 {
@@ -28,6 +31,44 @@ p {
     color: var(--darkergreen);
 }
 
+.nav {
+    border-bottom: 1px solid var(--darkgreen);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+
+.nav .logo {
+    font-family: "Source Serif 4", serif;
+    font-size: 1rem;
+    color: var(--darkergreen);
+    padding: 1rem 0rem 1rem 1rem;
+}
+
+.nav .navItems a {
+    font-family: "Source Serif 4", serif;
+    font-size: 1rem;
+    color: var(--darkergreen);
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem 2rem 1rem 2rem;
+    display: block;
+    width: 4rem; 
+}
+
+.nav .navItems a:hover {
+    color: var(--mutedwhite);
+    background-color: var(--darkergreen);
+    transition: 0.2s ease;
+}
+
 .firstPage {
     display: flex;
     flex-direction: column;
@@ -43,29 +84,14 @@ p {
     margin-left: 1rem;
 }
 
-.nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.nav button {
-    width: 11rem;
-    height: 3rem;
-    background-color: var(--lightgreen);
-    border: 1.5px solid var(--darkergreen);
-    border-radius: 2px;
-    font-family: "Source Serif 4", serif;
-    font-size: 1rem;
-    color: var(--darkergreen);
-}
-
-.nav button:hover {
-    background-color: var(--darkgreen);
-    color: white;
-    transition: 0.2s ease;
-    cursor: pointer;
+@media only screen and (max-width: 600px) {
+    .nav .navItems {
+      display: block;
+      width: 8rem;
+      float: right;
+    }
+    .nav .navItems a {
+        width: 4rem;
+        text-align: right;
+    }
 }
