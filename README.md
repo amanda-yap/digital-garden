@@ -1,3 +1,3 @@
-# digital garden
+# yap space
 
-An online collection.
+A space to yap.

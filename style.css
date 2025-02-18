@@ -50,6 +50,7 @@ p {
     font-size: 1rem;
     color: var(--darkergreen);
     padding: 1rem 0rem 1rem 1rem;
+    text-decoration: none;
 }
 
 .nav .navItems a {
@@ -69,6 +70,11 @@ p {
     transition: 0.2s ease;
 }
 
+.nav .navItems .active {
+    color: var(--mutedwhite);
+    background-color: var(--darkergreen);
+}
+
 .firstPage {
     display: flex;
     flex-direction: column;
@@ -85,13 +91,23 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
+    .nav {
+        border-bottom: none;
+        justify-content: flex-end;
+    }
     .nav .navItems {
       display: block;
       width: 8rem;
-      float: right;
+      margin-top: 1rem;
     }
     .nav .navItems a {
         width: 4rem;
         text-align: right;
+    }
+    .nav .logo {
+        display: none;
+    }
+    .firstPage {
+        margin-top: -8rem;
     }
 }
